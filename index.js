@@ -14,6 +14,9 @@ connection()
 app.use(express.json());
 app.use(cors());
 
+app.use("/",(req,res)=>{
+res.send("URL_SHORTNER_PP")
+})
 
 // routes
 app.use("/api/users", userRoutes);
