@@ -25,7 +25,7 @@ app.use("/api/password-reset", passwordResetRoutes);
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get('*', (req, res) => {
-  res.render(path.join(__dirname, './client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'));
 });
 
 const port = process.env.PORT || 8080;
