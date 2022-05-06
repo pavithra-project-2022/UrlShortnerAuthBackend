@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
 			}).save();
 		}
 
-		const url = `http://localhost:3001/password-reset/${user._id}/${token.token}/`;
+		const url = `https://urlshotnerbackend.herokuapp.com/password-reset/${user._id}/${token.token}/`;
 		await sendEmail(user.email, "Password Reset", url);
 
 		res
