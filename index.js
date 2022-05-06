@@ -20,7 +20,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/password-reset", passwordResetRoutes);
 
-//connecting frontend with backend
+//connecting frontend with backend //
 
 app.use(express.static(path.join(__dirname, "/client/build")));
 
