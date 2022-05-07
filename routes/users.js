@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 			userId: user._id,
 			token: crypto.randomBytes(32).toString("hex"),
 		}).save();
-		const url = `https://urlshotnerbackend.herokuapp.com/users/${user.id}/verify/${token.token}`;
+		const url = `http://loclahost:3000/users/${user.id}/verify/${token.token}`;
 		await sendEmail(user.email, "Verify Email", url);
 
 		res
